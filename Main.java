@@ -10,7 +10,8 @@ public class Main {
         String[] names = {"Adam", "Hank", "Ike", "John", "Jack", "Paul", "Peter", "Roger", "Roger", "Victor", "Walter"};
         String[] selectedNames = new String[35];
         Random rand = new Random();
-                
+        
+        
         for (int i = 0; i < 35; i++) {
             int randomIndex = rand.nextInt(names.length);
             selectedNames[i] = names[randomIndex];
@@ -20,7 +21,8 @@ public class Main {
             writer.write(name + "\n");
         }
         writer.close();
-           
+        
+        
         String[] sortedNames = new String[35];
         FileReader fr = new FileReader("myFile.txt");
         BufferedReader br = new BufferedReader(fr);
@@ -31,6 +33,7 @@ public class Main {
         }
         br.close();
         fr.close();
+        
                 
                 Arrays.sort(sortedNames);
                 FileWriter writer2 = new FileWriter("myFile2.txt");
